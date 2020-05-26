@@ -60,7 +60,7 @@ export default {
     // make an axios request to the server with the current search query
     search() {
       axios
-        .get(`http://127.0.0.1:3001/search?q=${this.query}`)
+        .get(`http://172.19.66.33:3001/search?q=${this.query}`)
         .then((response) => {
           this.results = response.data;
         });

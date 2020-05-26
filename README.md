@@ -1,4 +1,4 @@
-# vue_learn
+# pvSearch-vue-node-es
 
 ## Requirement:
 
@@ -10,11 +10,11 @@
 
 1. Save the EPICS PVs into Elastic Search (How? See this repo: [PV_crawler](https://github.com/Insomnia1437/PV_crawler))
 
-2. Modify the file `server/index.js`:
+2. Modify the file `server/index.js` and `src/components/Search.vue`, change the IP to your ES Host and nodejs server Host.
 
 ```nodejs
 const client = new elasticsearch.Client({
-  hosts: ['http://localhost:9200'],
+  hosts: ['http://172.19.66.33:9200'],
 });
 ```
 
