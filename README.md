@@ -10,7 +10,7 @@
 
 1. Save the EPICS PVs into Elastic Search (How? See this repo: [PV_crawler](https://github.com/Insomnia1437/PV_crawler))
 
-2. Modify the file `server/index.js` and `src/components/Search.vue`, change the IP to your ES Host and nodejs server Host.
+2. Modify the file `server/index.js` and `src/components/Search.vue`, change the IP to your ES Host and nodejs server Host as well as the index name.
 
 ```nodejs
 const client = new elasticsearch.Client({

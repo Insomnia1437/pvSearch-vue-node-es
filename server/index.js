@@ -54,16 +54,19 @@ app.get('/search', (req, res) => {
   // return only 200 results from the first result found.
   // also match any data where the name is like the query string sent in
   const body = {
-    size: 200,
+    size: 100,
     from: 0,
     query: {
-      wildcard: {
-        PVNAME: req.query.q,
+      match: {
+        PVNAME: {
+          query: req.query.q,
+          operator: 'and',
+        },
       },
     },
   };
   //     // perform the actual search passing in the index, the search query and the type
-  client.search({ index: 'test-pv', body })
+  client.search({ index: 'linac-epics-pv', body })
     .then((results) => {
       res.send(results.hits.hits);
     })

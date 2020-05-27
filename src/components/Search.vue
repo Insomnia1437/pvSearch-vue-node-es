@@ -79,6 +79,7 @@ export default {
 
 <style>
 .search .el-card__body{
+   min-height: 160px;
    max-height: 160px;
    overflow-y: scroll;
    overflow-x: scroll;
