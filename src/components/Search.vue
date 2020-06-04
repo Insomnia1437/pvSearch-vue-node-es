@@ -2,7 +2,7 @@
   <div class="search">
     <el-row style="margin-bottom: 20px">
       <el-input
-        placeholder="Support Regex like `*` and `?`"
+        placeholder="Support Delimiter: `:`, '_', '-' and space"
         style="width: 500px"
         v-model="query"
         size="medium"
